@@ -1,0 +1,36 @@
+<% include partials/header %>
+
+<div class="ui main text container">
+    <h2>The Dorky Board</h2>
+    
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+        <% posts.forEach(function(post) { %>
+            
+                <div class="item">
+                    <div class="image">
+                        <img class="ui rounded image" src="<%= post.image_link %>">
+                    </div>
+                    <div class="content">
+                        <a class="header" href="/posts/<%= post._id %>"><%= post.title %></a>
+                        <div class="meta">
+                            <span><%= post.created.toDateString() %></span>
+                        </div>
+                        <div class="description">
+                            <p><%- post.body.substring(0,100) %>...</p>
+                            
+                        </div>
+                        <div class="extra">
+                            <a class="ui right floated basic green button" href="/posts/<%= post._id %>">
+                                Read More
+                                <i class="right chevron icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        <% }) %>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>

@@ -1,0 +1,20 @@
+{
+  "name": "board",
+  "version": "1.0.0",
+  "description": "Dorky Board",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dustin Church",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-sanitizer": "^1.0.2",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.9.0"
+  },
+  "devDependencies": {}
+}
