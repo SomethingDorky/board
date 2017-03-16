@@ -7,8 +7,11 @@ var expressSanitizer    = require("express-sanitizer"),
     app                 = express();
     
 
+// Connect Mongoose to MongoDB    
+var url = process.env.DATABASEURL || "mongodb://localhost/dorky_board";
+mongoose.connect(url);
+
 // App Configuration
-mongoose.connect("mongodb://localhost/dorky_board");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
